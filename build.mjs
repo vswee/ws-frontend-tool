@@ -4,7 +4,7 @@ import variables from "./build-directives/variables.mjs";
 import buildVariables from "./build-directives/build-variables.mjs";
 
 let start = Date.now()
-
+let compilation_date = start.toString() 
 
 
 

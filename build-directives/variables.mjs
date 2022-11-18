@@ -1,6 +1,7 @@
 let variables = {
-  name: "Wallet Scrutiny",
-  site: "https://walletscrutiny.com",
+  site: "Wallet Scrutiny",
+  base_url: "https://walletscrutiny.com",
+  twitter:"@WalletScrutiny",
 }
 
 export default variables 

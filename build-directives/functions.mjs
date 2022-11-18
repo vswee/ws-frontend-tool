@@ -4,6 +4,7 @@ import sass from 'node-sass'
 import path from 'path'
 import UglifyJS from "uglify-js"
 import yaml from 'js-yaml'
+import variables from "./variables.mjs";
 
 function listFiles(parent) {
 
@@ -54,11 +55,28 @@ function appendJSON(category) {
     let parseData = read(category + '/' + file).split("---")[1]
     parseData = yaml.load(parseData);
     let key = file.substring(file.length - 3) === ".md" ? file.substring(0, file.length - 3) : file
-    parseData.raw= String(category + '/' + file)
+    parseData.raw = String(category + '/' + file)
+    parseData.category = category.replace("./components/_", "")
     workingJSON[key] = parseData
   }
   fs.writeFileSync('./tmp/wallets.json', JSON.stringify(workingJSON));
   fs.writeFileSync('./dist/src/json/wallets.json', JSON.stringify(workingJSON));
+}
+
+function replaceVariablePlaceholders(component, placeholders, replacements) {
+  let index = 0
+  for (const placeholder of placeholders) {
+    let regex = new RegExp(placeholder,"g");
+    component.replace(regex, replacements[index])
+    index++
+  }
+  return component
+}
+
+
+
+function makeReviewPage() {
+  let workingJSON = JSON.parse(read('./tmp/wallets.json'))
 }
 
 function consolidateAssets() {
@@ -102,7 +120,7 @@ function consolidateAssets() {
   }
 
 
-  const assetFolders = []//['./src/img/', './src/fonts/']
+  const assetFolders = ['./src/img/', './src/fonts/']
   for (const dir of assetFolders) {
     let destDir = dir.replace('./src/', './dist/src/')
     fse.copySync(dir, destDir)
@@ -144,7 +162,7 @@ function consolidateAssets() {
 // }
 
 function test() {
-  console.log("test successful")
+  console.log("test print successful")
 }
 
 export { listFiles, read, reCreateFolders, titlify, getDirectories, consolidateAssets, appendJSON, test }
