@@ -1,4 +1,4 @@
-import {listFiles, read, reCreateFolders, titlify, getDirectories, consolidateAssets, appendJSON, test} from "./build-directives/functions.mjs";
+import {listFiles, read, reCreateFolders, titlify, getDirectories, consolidateAssets, appendJSON, makeReviewPage, test} from "./build-directives/functions.mjs";
 
 import variables from "./build-directives/variables.mjs";
 import buildVariables from "./build-directives/build-variables.mjs";
@@ -15,7 +15,7 @@ for (const folder of buildVariables.mainFolders) { reCreateFolders(folder) }
 consolidateAssets()
 
 for (const category of buildVariables.categories) { appendJSON(category) }
-
+makeReviewPage()
 
 // for (const directory of getDirectories('./pages')) {
 //   makePage(directory)

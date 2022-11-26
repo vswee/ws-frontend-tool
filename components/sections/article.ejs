@@ -1,0 +1,204 @@
+<article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+  <meta itemprop="headline" content="$title">
+
+  <meta itemprop="description" content="">
+
+
+  <meta itemprop="datePublished" content="$format_date">
+
+
+  <div class="page__inner-wrap">
+    <div class="app-summary-grid">
+      <img src="/src/img/wIcons/$category/$appId.png" class="app_logo_big" alt="Wallet Logo">
+      <div class="app-sum-head">
+
+        <h1 class="page__title -va-c" itemprop="headline">
+
+          $title
+
+        </h1>
+
+        <span><i class="fas fa-history"></i> Latest release: $version (<span title='$elapsed_updated' data="$elapsed_updated">
+          $elapsed_updated
+          </span>)</span>
+
+        <span>🔍 Last analysed
+          <span title='$format_date' class="calculate-time-elapsed" data="$format_date">
+            $format_date
+          </span>.
+        </span>
+
+
+        <a id="$verdict" href="/methodology/#$verdict" class="verdictBadge $verdict"><span>$verdict</span></a>
+
+
+
+        <div class="social-row">
+          <ul>
+            <li title='Link to $title on the Play Store'>
+              <a href="https://play.google.com/store/apps/details?id=$appId" class="link-web">
+                <i class="fab fa-google-play"></i>
+              </a>
+            </li>
+
+            <li title='Product website'>
+              <a href="https://standardsats.github.io" class="link-web">
+                <i class="fas fa-globe"></i>
+              </a>
+            </li>
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="app-payload-flex">
+
+
+
+
+
+        <div title="Downloaded over $users times. (Latest version: $version)">
+          <label>
+            <i class="fas fa-download"></i>&nbsp;Downloads
+          </label>
+          <div>
+            <span class="humanised-numbers"><i class="fas fa-chevron-right"></i>
+
+
+              $users
+
+            </span>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+
+    <div id="versions"></div>
+
+    <p>
+      <a href="#verdictExplained">Jump to verdict&nbsp;<i class="fas fa-arrow-down"></i></a>
+    </p>
+
+
+
+
+
+
+
+    <h1 style="clear:both">Do your own research!</h1>
+    <p>Try out searching
+      for "lost bitcoins", "stole my money" or "scammers" together with the wallet's
+      name, even if you
+      think the wallet is generally trustworthy. For all the bigger wallets you will
+      find accusations. Make sure you understand why they were made and if you are
+      comfortable with the provider's reaction.</p>
+    <p>If you find something we should include, you can
+      <a href="https://gitlab.com/walletscrutiny/walletScrutinyCom/-/issues">create
+        an issue</a> or
+      <a href="https://gitlab.com/walletscrutiny/walletScrutinyCom/-/blob/master/_android/$appId.md">edit
+        this analysis</a> yourself and create a merge request for your changes.
+    </p>
+
+    <h1 id="analysis">The Analysis&nbsp;<a href="#analysis" style="color:#ccc">&para;</a></h1>
+
+    <section class="page__content" itemprop="text">
+
+
+
+
+
+      $section-verdict
+
+  </div>
+  </div>
+
+
+
+
+
+
+  </section>
+
+
+  <section class="page__share">
+
+    <h4 class="page__share-title">Share on</h4>
+
+
+    <a href="https://twitter.com/intent/tweet?text=$base_url/$category/$appId/" class="btn btn--twitter"
+      title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+    <a href="https://www.facebook.com/sharer/sharer.php?u=$base_url/$category/$appId/" class="btn btn--facebook"
+      title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=$base_url/$category/$appId/" class="btn btn--linkedin"
+      title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </section>
+  <section class="page__share">
+    <h4 class="page__share-title">Or embed a widget in your website</h4>
+    <div class="code-block-holder">
+      <pre class="highlight">
+<code><span class="cb-tag">&lt;<span class="cb-name">iframe</span> 
+  <span class="cb-attr">src</span>=<span class="cb-string">"$base_url/widget/#appId=$category/$appId&theme=auto&style=short"</span> <span class="cb-attr">name</span>=<span class="cb-string">"<span class="_ts">_ts</span>"</span>
+  <span class="cb-attr">style</span>=<span class="cb-string">"min-width:180px;border:0;border-radius:10px;max-width:280px;min-height:30px;"</span>&gt;</span>
+<span class="cb-tag">&lt;/<span class="cb-name">iframe</span>&gt;</span></code>
+</pre>
+      <button class="copy_to_clipboard" onclick="copyToClipboard(this);"><i class="fas fa-copy"></i>&nbsp;copy</button>
+    </div>
+
+    will show<br>
+
+    <iframe src="/widget/#appId=$category/$appId&theme=auto&style=short"
+      style="min-width:180px;border:0;border-radius:10px;max-width:280px;min-height:30px;box-shadow:0px 2px 4px var(--shadow-2);"></iframe>
+
+    <br>and<br>
+    <div class="code-block-holder">
+      <pre class="highlight">
+<code><span class="cb-tag">&lt;<span class="cb-name">iframe</span> 
+  <span class="cb-attr">src</span>=<span class="cb-string">"$base_url/widget/#appId=$category/$appId&theme=auto&style=long"</span> <span class="cb-attr">
+  style</span>=<span class="cb-string">"max-width:100%;width:342px;border:0;border-radius:10px;min-height:290px;"</span>&gt;</span>
+<span class="cb-tag">&lt;/<span class="cb-name">iframe</span>&gt;</span></code>
+</pre>
+      <button class="copy_to_clipboard" onclick="copyToClipboard(this);"><i class="fas fa-copy"></i>&nbsp;copy</button>
+    </div>
+    will show<br>
+
+    <iframe src="/widget/#appId=$category/$appId&theme=auto&style=long"
+      style="max-width:100%;width:342px;border:0;border-radius:10px;min-height:290px;box-shadow:0px 2px 4px var(--shadow-2);"></iframe>
+  </section>
+
+
+  <script>
+    function copyToClipboard(target) {
+      const text = target.parentNode.querySelectorAll("code")[0].innerText.replace(/\s+/g, ' ')
+      const dummyInput = document.createElement("input")
+      dummyInput.setAttribute("style", "opacity:0;position:fixed;z-index:-99;pointer-events:none")
+      document.body.append(dummyInput)
+      dummyInput.value = text
+      dummyInput.focus()
+      dummyInput.select()
+      if (document.execCommand("copy")) {
+        target.innerHTML = '<i class="fas fa-clipboard-check"></i>&nbsp;success'
+        dummyInput.remove()
+        setTimeout(() => {
+          target.innerHTML = '<i class="fas fa-copy"></i>&nbsp;copy'
+        }, 1e3)
+      }
+    }
+  </script>
+
+
+  </div>
+</article>
